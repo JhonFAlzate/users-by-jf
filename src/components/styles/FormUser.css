@@ -1,0 +1,138 @@
+.form_container {
+   
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0002;
+    backdrop-filter: blur(2px);
+    transition: transform 200ms ease;
+}
+.form_close {
+    transform: scale(0);
+}
+
+.form_succsessful {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0002;
+    backdrop-filter: blur(2px);
+    transition: transform 100ms ease;
+    
+}
+.form_successful_close {
+    transform: scale(0);
+}
+.Form_succsessful_message {
+   
+   
+    background-color: rgb(252, 212, 160);
+    width: 20em;
+    height: 10em;
+    
+    border-radius: 0.4em;
+    box-shadow: 2px 2px 2px 1px rgb(185, 106, 9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.form_exit_actualize{
+    background-color: #ee991a;
+    text-align: center;
+    width: 5em;
+    border-radius: 0.2em;
+    font-size: 1.3em;
+    right: 1.8em;
+    top:1em;
+    color: white;
+    cursor: pointer;
+    background-color: rgb(185, 106, 9);
+    color: white;
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 13px 10px #ee991a;
+        background-color: rgb(240, 240, 12);
+        color: black;
+        filter:brightness(1.2); 
+    }
+    
+
+}
+
+.form {
+    width: 100%;
+    max-width: 25em;
+    padding: 3em 2em 2.5em;
+    background-color: white;
+    border-radius: 0.8em;
+    position: relative;
+  
+}
+.form_exit {
+    position: absolute;
+    font-size: 1.3em;
+    right: 1.8em;
+    top:1em;
+    color: red;
+    cursor: pointer;
+}
+.form_title {
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: underline;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+
+}
+.form_list {
+    display: grid;
+    gap: 1em;
+    margin-bottom: 1.5em;
+}
+.form_field {
+    display: grid;
+    gap: 0.4em;
+
+}
+.form_label {
+    font-size: 0.9em;
+    padding-left: 1em;
+
+}
+.form_input {
+    padding: 0.4em 1em;
+    font-weight: 300;
+    border-radius: 0.4em;
+    border: 0.1em solid #ccc;
+
+}
+.form_btn {
+    width: 100%;
+    padding: 0.6em;
+    font-size: 1em;
+    font-weight: 500;
+    border-radius: 0.5em;
+    background-color: rgb(185, 106, 9);
+    color: white;
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 13px 10px #ee991a;
+        background-color: rgb(240, 240, 12);
+        color: black;
+        filter:brightness(1.2); 
+    }
+}
