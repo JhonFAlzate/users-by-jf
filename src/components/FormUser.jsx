@@ -94,7 +94,7 @@ const FormUser = ({
                 aria-invalid={errors.password ? "true" : "false"}
               />
               {errors.password?.type === "required" && (
-                <p role="alert">🚦 Password required 🚦</p>
+                <p className="form_alert" role="alert">🚦 Password required 🚦</p>
               )}
             </label>
             <label className="form_field">
@@ -105,7 +105,7 @@ const FormUser = ({
                 aria-invalid={errors.first_name ? "true" : "false"}
               />
               {errors.first_name?.type === "required" && (
-                <p role="alert"> 🚦 Name required 🚦</p>
+                <p className="form_alert" role="alert"> 🚦 Name required 🚦</p>
               )}
             </label>
             <label className="form_field">
@@ -116,7 +116,7 @@ const FormUser = ({
                 aria-invalid={errors.last_name ? "true" : "false"}
               />
               {errors.last_name?.type === "required" && (
-                <p role="alert"> 🚦 Last Name required 🚦 </p>
+                <p className="form_alert" role="alert"> 🚦 Last Name required 🚦 </p>
               )}
             </label>
             <label className="form_field">

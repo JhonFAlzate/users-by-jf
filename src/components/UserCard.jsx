@@ -3,13 +3,14 @@
 import { useState } from 'react'
 import './styles/UserCard.css'
 
-const UserCard = ({user, deleteUser, setUserSelected, setFormIsOpen, succesDelete, setSuccesDelete}) => {
+const UserCard = ({user, deleteUser, setUserSelected, setFormIsOpen, setSuccesDelete, setUserDeleted}) => {
 
 
 
 const handleDelete = () => {
     deleteUser(user.id)
     setSuccesDelete(true)
+    setUserDeleted(user)
     
 
 }

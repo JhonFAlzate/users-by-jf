@@ -12,7 +12,7 @@ function App() {
   const [userSelected, setUserSelected] = useState()
   const [succes, setSucces] = useState(false)
   const [succesDelete, setSuccesDelete] = useState(false)
-  
+  const [userDeleted, setUserDeleted] = useState()
  
 
   useEffect(() => {
@@ -56,6 +56,7 @@ const handleClose = ()=> {
             key = {user.id}
             user={user}
             deleteUser= {deleteUser}
+            setUserDeleted = {setUserDeleted}
             setUserSelected={setUserSelected}
             setFormIsOpen = {setFormIsOpen}
             succesDelete = {succesDelete}
@@ -68,7 +69,7 @@ const handleClose = ()=> {
           ? ( <div className={`user_succsessful ${succesDelete || "user_successful_close"}`}>
           <div className='user_window'>
           <h2 className='user_message_delete_title'>Deleted User</h2>
-           <p className='user_message_delete_p'>The user <span className='user_message_delete_user'></span>has been eliminated</p>
+           <p className='user_message_delete_p'>The user <span className='user_message_delete_user'>{userDeleted.first_name} {userDeleted.last_name} </span>has been eliminated</p>
            <button onClick={handleClose} className='user_message_delete_btn'>accept</button>
         </div>
        </div>)
