@@ -62,11 +62,11 @@
 }
 .user_window {
     
-    background-color: rgb(252, 212, 160);
+    background-color: rgb(226, 138, 21);
     width: 20em;
     height: 10em;
     padding: 1em;
-    box-shadow: 2px 2px 2px 1px rgb(185, 106, 9);
+    box-shadow: 3px 4px 2px 1px rgb(64, 58, 50);
     display: grid;
     grid-template-rows: 1.5fr 1.5fr 1fr ;
 }
@@ -77,12 +77,15 @@
 
 .user_message_delete_user {
     color: white;
+    
 }
 .user_message_delete_btn {
    
    margin-left: auto;
    margin-right: auto;
     width: 8em;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.3em;
     border-radius: 0.3em;
     &:hover {
         transform: translateY(-5px);
