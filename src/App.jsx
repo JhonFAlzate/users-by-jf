@@ -24,6 +24,9 @@ function App() {
 const hadleOpenForm = () => {
   setFormIsOpen(true)
 }
+const handleClose = ()=> {
+  setSuccesDelete(false)
+}
 
   return (
     <>
@@ -38,7 +41,6 @@ const hadleOpenForm = () => {
         <FormUser createrUser = {createrUser}
         userSelected = {userSelected}
         updateUser= {updateUser}
-
         setUserSelected = {setUserSelected}
         formIsOpen = {formIsOpen}
         setFormIsOpen = {setFormIsOpen}
@@ -60,6 +62,18 @@ const hadleOpenForm = () => {
             setSuccesDelete= {setSuccesDelete}
             />
           ))
+        }
+        {
+          (succesDelete )
+          ? ( <div className={`user_succsessful ${succesDelete || "user_successful_close"}`}>
+          <div className='user_window'>
+          <h2 className='user_message_delete_title'>Deleted User</h2>
+           <p className='user_message_delete_p'>The user <span className='user_message_delete_user'></span>has been eliminated</p>
+           <button onClick={handleClose} className='user_message_delete_btn'>accept</button>
+        </div>
+       </div>)
+       :  console.log(succesDelete)
+
         }
       </div>
       

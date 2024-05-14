@@ -1,13 +1,16 @@
 
 
+import { useState } from 'react'
 import './styles/UserCard.css'
 
 const UserCard = ({user, deleteUser, setUserSelected, setFormIsOpen, succesDelete, setSuccesDelete}) => {
 
 
+
 const handleDelete = () => {
     deleteUser(user.id)
     setSuccesDelete(true)
+    
 
 }
 
@@ -17,9 +20,7 @@ const handleEdit = () => {
     
 }
 
-const handleClose = ()=> {
-  setSuccesDelete(false)
-}
+
 
   return (
     <>
@@ -37,14 +38,7 @@ const handleClose = ()=> {
      </article>
 
        
-      <div className={`user_succsessful ${succesDelete || "user_successful_close"}`}>
-        <div className='user_window'>
-        <h2 className='user_message_delete_title'>Deleted User</h2>
-        
-         <p className='user_message_delete_p'>The user <span className='user_message_delete_user'>{user.first_name} {user.last_name}</span> has been eliminated</p>
-         <button onClick={handleClose} className='user_message_delete_btn'>accept</button>
-      </div>
-     </div>
+    
 
     </>
   
